@@ -56,19 +56,16 @@ def get_most_expensive_transaction(block_num):
     max_tx = None
     for tx in blockTxs:
         cost = get_transaction_cost(tx['hash'])
-        print(cost)
         if cost > mostExpensive:
+            mostExpensive = cost
             max_tx = tx['hash']
 
     # max_tx = HexBytes(max_tx)
     return max_tx
 
 
-print(get_most_expensive_transaction(2000000))
-# txCost = get_transaction_cost('0x0dda1142828634746a8e49e707fddebd487355a172bfa94b906a151062299578')
-# print(txCost)
-# print('\n')
-# print('cost in USD: ')
-# print(txCost * 1385.02)
+print(get_most_expensive_transaction(11001136))
+# Most exp for block 11001136: 0x79ab8d448d4cda0287db3f0f9ac93cd4c824be03cb189725ae6a0adfdadff6d8'
+
 
 
