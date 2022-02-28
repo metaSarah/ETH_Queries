@@ -8,13 +8,13 @@ w3 = Web3(Web3.HTTPProvider('http://' + IP_ADDR + ':' + PORT))
 
 if w3.isConnected():
 #     This line will mess with our autograders, but might be useful when debugging
-    print( "Connected to Ethereum node" )
+    # print( "Connected to Ethereum node" )
 else:
     print( "Failed to connect to Ethereum node!" )
 
 def get_transaction(tx):
     txObj = w3.eth.getTransaction(tx)   #YOUR CODE HERE
-    print(type(tx))
+    # print(type(tx))
     return txObj
 
 # # Return the gas price used by a particular transaction,
@@ -61,7 +61,7 @@ def get_most_expensive_transaction(block_num):
     return max_tx
 
 
-print(get_block_cost(2000000))
+# print(get_block_cost(2000000))
 # txCost = get_transaction_cost('0x0dda1142828634746a8e49e707fddebd487355a172bfa94b906a151062299578')
 # print(txCost)
 # print('\n')
