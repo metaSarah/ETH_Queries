@@ -50,8 +50,8 @@ def get_block_cost(block_num):
 # # Return the hash of the most expensive transaction
 def get_most_expensive_transaction(block_num):
     blockTxs = w3.eth.get_block(block_num, full_transactions=True).transactions
-    print(blockTxs)
-    print(type(blockTxs))
+    # print(blockTxs)
+    # print(type(blockTxs))
     mostExpensive = 0
     max_tx = None
     for tx in blockTxs:
@@ -64,7 +64,7 @@ def get_most_expensive_transaction(block_num):
     return max_tx
 
 
-print(get_most_expensive_transaction(11001136))
+# print(get_most_expensive_transaction(11001136))
 # Most exp for block 11001136: 0x79ab8d448d4cda0287db3f0f9ac93cd4c824be03cb189725ae6a0adfdadff6d8'
 
 
